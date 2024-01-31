@@ -53,7 +53,7 @@ function AnimatedLogo() {
 	});
 	return (
 		<div>
-			<h1 className="ml11">
+			<h1 className="ml11 text-center">
 				<span className="text-wrapper">
 					<span className="line line1"></span>
 					<span className="letters">Varia</span>
