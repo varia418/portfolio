@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
+import AnimatedLogo from "@/components/AnimatedLogo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,14 +18,19 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className + " flex"}>
-				<nav className="w-1/6 flex flex-col">
-                    <div>logo</div>
-                    <ul>pages</ul>
-                    <div>copyrights</div>
-                </nav>
-				<main className="w-5/6">{children}</main>
+			<body className={inter.className + " flex h-screen"}>
+				<nav className="w-1/6 flex flex-col justify-between p-10">
+					<AnimatedLogo />
+					<ul>
+						<li>home</li>
+						<li>about</li>
+						<li>contact</li>
+					</ul>
+					<div>copyrights</div>
+				</nav>
+				<main className="w-5/6 bg-slate-200">{children}</main>
 			</body>
+			<Script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" />
 		</html>
 	);
 }
