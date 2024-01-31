@@ -26,7 +26,9 @@ export default function RootLayout({
 						<li>about</li>
 						<li>contact</li>
 					</ul>
-					<p className="text-center">© 2024 Let's work together</p>
+					<p className="text-center text-sm">
+						© 2024 Varia. All Rights Reserved.
+					</p>
 				</nav>
 				<main className="w-5/6 bg-slate-100">{children}</main>
 			</body>
