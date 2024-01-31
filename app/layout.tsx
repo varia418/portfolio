@@ -19,16 +19,16 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className + " flex h-screen"}>
-				<nav className="w-1/6 flex flex-col justify-between p-10">
+				<nav className="w-1/6 flex flex-col justify-between p-10 border border-gray-300">
 					<AnimatedLogo />
 					<ul>
 						<li>home</li>
 						<li>about</li>
 						<li>contact</li>
 					</ul>
-					<div>copyrights</div>
+					<p className="text-center">© 2024 Let's work together</p>
 				</nav>
-				<main className="w-5/6 bg-slate-200">{children}</main>
+				<main className="w-5/6 bg-slate-100">{children}</main>
 			</body>
 			<Script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" />
 		</html>
