@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import NavLinks from "./NavLinks";
 
 function MobileNav() {
 	const toggleMobileNav = () => {
@@ -11,7 +12,10 @@ function MobileNav() {
 
 	return (
 		<>
-			<button className="sm:hidden fixed top-10 left-10" onClick={toggleMobileNav}>
+			<button
+				className="sm:hidden fixed top-10 left-10"
+				onClick={toggleMobileNav}
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
@@ -58,19 +62,12 @@ function MobileNav() {
 							</svg>
 						</button>
 					</div>
-
-					<ul className="flex flex-col gap-5 mt-5 mb-auto">
-						<li>About</li>
-						<li>Company</li>
-						<li>Services</li>
-						<li>Testimonials</li>
-					</ul>
-
+					<NavLinks />
 					<a className="rounded bg-red-100 text-red-500 font-medium py-2 px-3 text-center">
-						Contact Us
+						Contact Me
 					</a>
 					<span className="mt-3 text-sm text-center text-gray-500">
-						@ 2023 All rights reserved.
+						© 2024 Varia. All Rights Reserved.
 					</span>
 				</nav>
 			</div>
