@@ -11,7 +11,7 @@ function MobileNav() {
 
 	return (
 		<>
-			<button className="fixed top-10 left-10" onClick={toggleMobileNav}>
+			<button className="sm:hidden fixed top-10 left-10" onClick={toggleMobileNav}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
