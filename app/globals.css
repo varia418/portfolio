@@ -58,3 +58,19 @@ body {
     display: inline-block;
     line-height: 1em;
 }
+
+.radio-group {
+    position: relative;
+}
+
+.radio {
+    display: inline-block;
+    border-radius: 100%;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 2px 0;
+}
+
+.radio.selected {
+    border-color: blue;
+}
