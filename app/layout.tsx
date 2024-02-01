@@ -4,6 +4,8 @@ import "./globals.css";
 import Script from "next/script";
 import AnimatedLogo from "@/components/AnimatedLogo";
 import Link from "next/link";
+import Image from "next/image";
+import MobileNav from "@/components/MobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +22,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className + " flex h-screen"}>
-				<nav className="lg:w-1/6 md:w-1/3 flex flex-col justify-between p-10 border border-gray-300 bg-sky-500">
+				<nav className="hidden sm:block lg:w-1/6 md:w-1/3 flex flex-col justify-between p-10 border border-gray-300 bg-sky-500">
 					<AnimatedLogo />
 					<ul>
 						<li className="mb-5 pb-3 border-b border-slate-400">
@@ -104,7 +106,7 @@ export default function RootLayout({
 						© 2024 Varia. All Rights Reserved.
 					</p>
 				</nav>
-				<main className="bg-slate-100 grow">{children}</main>
+				<main className="bg-slate-100 grow p-10">{children}</main>
 				<button className="fixed bottom-10 right-10">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -126,6 +128,7 @@ export default function RootLayout({
 						/>
 					</svg>
 				</button>
+				<MobileNav />
 			</body>
 			<Script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" />
 		</html>
