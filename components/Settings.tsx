@@ -4,15 +4,30 @@ import "@/loader";
 
 function Settings() {
 	useEffect(() => {
-		$(".radio-group .radio").click(function () {
-			$(this).parent().find(".radio").removeClass("selected");
-			$(this).addClass("selected");
-			var val = $(this).attr("data-value");
-			console.log("🚀 ~ val:", val);
-		});
+		$("#theme-picker")
+			.children()
+			.click(function () {
+				$("#theme-picker").children().removeClass("selected");
+				$(this).addClass("selected");
+				var val = $(this).attr("data-value");
+			});
+
+		$("#primary-color-picker")
+			.children()
+			.click(function () {
+				$("#primary-color-picker")
+					.children()
+					.each((index, elem) => {
+						const color = $(elem).attr("data-value");
+						$(elem).removeClass(`border-${color}-500`);
+					});
+				var selectedColor = $(this).attr("data-value");
+				$(this).addClass(`border-${selectedColor}-500`);
+			});
 
 		return () => {
-			$(".radio-group .radio").unbind("click");
+			$("#theme-picker").children().unbind("click");
+			$("#primary-color-picker").children().unbind("click");
 		};
 	});
 
@@ -51,37 +66,44 @@ function Settings() {
 				<h3 className="font-bold border-b mb-2 text-center border-slate-500">
 					Theme
 				</h3>
-				<div className="radio-group flex justify-evenly">
+				<div id="theme-picker" className="flex justify-evenly">
 					<div
-						className="inline-block cursor-pointer rounded-full border my-1 border-black size-5 bg-white selected"
+						className="inline-block cursor-pointer rounded-full border-2 size-6"
 						data-value="light"
-					></div>
+					>
+						<div className="inline-block cursor-pointer rounded-full border border-black size-5 bg-white"></div>
+					</div>
 					<div
-						className="inline-block cursor-pointer rounded-full border my-1 border-black size-5 bg-black"
+						className="inline-block cursor-pointer rounded-full border-2 size-6"
 						data-value="dark"
-					></div>
+					>
+						<div className="inline-block cursor-pointer rounded-full border border-black size-5 bg-black"></div>
+					</div>
 				</div>
 				<h3 className="font-bold border-b my-2 text-center border-slate-500">
 					Primary color
 				</h3>
-				<div className="radio-group flex justify-evenly">
-					<div className="inline-block cursor-pointer rounded-full border-2 border-red-500 size-6">
-						<div
-							className="inline-block cursor-pointer rounded-full border border-white size-5 bg-red-500"
-							data-value="red"
-						></div>
+				<div
+					id="primary-color-picker"
+					className="radio-group flex justify-evenly"
+				>
+					<div
+						className="inline-block cursor-pointer rounded-full border-2 size-6"
+						data-value="red"
+					>
+						<div className="inline-block cursor-pointer rounded-full border border-white size-5 bg-red-500"></div>
 					</div>
-					<div className="inline-block cursor-pointer rounded-full border-2 border-blue-500 size-6">
-						<div
-							className="inline-block cursor-pointer rounded-full border border-white size-5 bg-blue-500"
-							data-value="blue"
-						></div>
+					<div
+						className="inline-block cursor-pointer rounded-full border-2 size-6"
+						data-value="blue"
+					>
+						<div className="inline-block cursor-pointer rounded-full border border-white size-5 bg-blue-500"></div>
 					</div>
-					<div className="inline-block cursor-pointer rounded-full border-2 border-green-500 size-6">
-						<div
-							className="inline-block cursor-pointer rounded-full border border-white size-5 bg-green-500"
-							data-value="green"
-						></div>
+					<div
+						className="inline-block cursor-pointer rounded-full border-2 size-6"
+						data-value="green"
+					>
+						<div className="inline-block cursor-pointer rounded-full border border-white size-5 bg-green-500"></div>
 					</div>
 				</div>
 			</div>
