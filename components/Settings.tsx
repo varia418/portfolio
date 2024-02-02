@@ -65,18 +65,24 @@ function Settings() {
 					Primary color
 				</h3>
 				<div className="radio-group flex justify-evenly">
-					<div
-						className="inline-block cursor-pointer rounded-full border my-1 border-black size-5 bg-red-500"
-						data-value="red"
-					></div>
-					<div
-						className="inline-block cursor-pointer rounded-full border my-1 border-black size-5 bg-blue-500"
-						data-value="blue"
-					></div>
-					<div
-						className="inline-block cursor-pointer rounded-full border my-1 border-black size-5 bg-green-500"
-						data-value="green"
-					></div>
+					<div className="inline-block cursor-pointer rounded-full border-2 border-red-500 size-6">
+						<div
+							className="inline-block cursor-pointer rounded-full border border-white size-5 bg-red-500"
+							data-value="red"
+						></div>
+					</div>
+					<div className="inline-block cursor-pointer rounded-full border-2 border-blue-500 size-6">
+						<div
+							className="inline-block cursor-pointer rounded-full border border-white size-5 bg-blue-500"
+							data-value="blue"
+						></div>
+					</div>
+					<div className="inline-block cursor-pointer rounded-full border-2 border-green-500 size-6">
+						<div
+							className="inline-block cursor-pointer rounded-full border border-white size-5 bg-green-500"
+							data-value="green"
+						></div>
+					</div>
 				</div>
 			</div>
 		</div>
