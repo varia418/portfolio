@@ -53,11 +53,11 @@ function Settings() {
 				</h3>
 				<div className="radio-group flex justify-evenly">
 					<div
-						className="radio size-5 bg-white"
+						className="inline-block rounded-full border my-1 border-black size-5 bg-white selected"
 						data-value="light"
 					></div>
 					<div
-						className="radio size-5 bg-black"
+						className="inline-block rounded-full border my-1 border-black size-5 bg-black"
 						data-value="dark"
 					></div>
 				</div>
@@ -66,15 +66,15 @@ function Settings() {
 				</h3>
 				<div className="radio-group flex justify-evenly">
 					<div
-						className="radio size-5 bg-red-500"
+						className="inline-block rounded-full border my-1 border-black size-5 bg-red-500"
 						data-value="red"
 					></div>
 					<div
-						className="radio size-5 bg-blue-500"
+						className="inline-block rounded-full border my-1 border-black size-5 bg-blue-500"
 						data-value="blue"
 					></div>
 					<div
-						className="radio size-5 bg-green-500"
+						className="inline-block rounded-full border my-1 border-black size-5 bg-green-500"
 						data-value="green"
 					></div>
 				</div>
