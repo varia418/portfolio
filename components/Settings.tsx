@@ -22,7 +22,7 @@ function Settings() {
 	}
 
 	return (
-		<div className="flex fixed bottom-10 right-0 items-end translate-x-full mr-10">
+		<div className="flex fixed bottom-10 right-0 items-end translate-x-full mr-10 duration-200">
 			<button
 				className="p-2 border border-gray-300 h-fit bg-white"
 				onClick={toggleSettings}
