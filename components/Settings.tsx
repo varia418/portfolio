@@ -15,16 +15,25 @@ function Settings() {
 			$(".radio-group .radio").unbind("click");
 		};
 	});
+
+	function toggleSettings(event: React.MouseEvent<HTMLElement>) {
+		const settingBox = $(event.target).closest("div");
+		settingBox.toggleClass("translate-x-full mr-10");
+	}
+
 	return (
-		<div className="flex fixed bottom-10 right-0 items-end">
-			<button className="p-2 border border-gray-300 h-fit bg-white">
+		<div className="flex fixed bottom-10 right-0 items-end translate-x-full mr-10">
+			<button
+				className="p-2 border border-gray-300 h-fit bg-white"
+				onClick={toggleSettings}
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
 					viewBox="0 0 24 24"
 					strokeWidth={1.5}
 					stroke="currentColor"
-					className="w-6 h-6"
+					className="size-6"
 				>
 					<path
 						strokeLinecap="round"
