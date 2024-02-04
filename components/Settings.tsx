@@ -4,6 +4,17 @@ import "@/loader";
 
 function Settings() {
 	useEffect(() => {
+		$("#theme-picker").children().removeClass("selected");
+
+		$("#primary-color-picker")
+			.children()
+			.each((index, elem) => {
+				const color = $(elem).attr("data-value");
+				$(elem).removeClass(`border-${color}-500`);
+			});
+	}, []);
+
+	useEffect(() => {
 		$("#theme-picker")
 			.children()
 			.click(function () {
@@ -37,7 +48,7 @@ function Settings() {
 	}
 
 	return (
-		<div className="flex fixed bottom-10 right-0 items-end translate-x-full mr-10 duration-200">
+		<div className="flex fixed bottom-10 right-0 items-end translate-x-full mr-10 duration-250">
 			<button
 				className="p-2 border border-gray-300 h-fit bg-white"
 				onClick={toggleSettings}
@@ -88,22 +99,22 @@ function Settings() {
 					className="radio-group flex justify-evenly"
 				>
 					<div
-						className="inline-block cursor-pointer rounded-full border-2 size-6"
+						className="inline-block cursor-pointer rounded-full border-2 border-red-500 size-6"
 						data-value="red"
 					>
-						<div className="inline-block cursor-pointer rounded-full border border-white size-5 bg-red-500"></div>
+						<div className="inline-block cursor-pointer rounded-full border border-white bg-red-500 size-5"></div>
 					</div>
 					<div
-						className="inline-block cursor-pointer rounded-full border-2 size-6"
+						className="inline-block cursor-pointer rounded-full border-2 border-blue-500 size-6"
 						data-value="blue"
 					>
-						<div className="inline-block cursor-pointer rounded-full border border-white size-5 bg-blue-500"></div>
+						<div className="inline-block cursor-pointer rounded-full border border-white bg-blue-500 size-5"></div>
 					</div>
 					<div
-						className="inline-block cursor-pointer rounded-full border-2 size-6"
+						className="inline-block cursor-pointer rounded-full border-2 border-green-500 size-6"
 						data-value="green"
 					>
-						<div className="inline-block cursor-pointer rounded-full border border-white size-5 bg-green-500"></div>
+						<div className="inline-block cursor-pointer rounded-full border border-white bg-green-500 size-5"></div>
 					</div>
 				</div>
 			</div>
