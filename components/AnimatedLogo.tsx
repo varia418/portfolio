@@ -54,9 +54,9 @@ function AnimatedLogo() {
 	return (
 		<div>
 			<h1 className="ml11 text-center">
-				<span className="text-wrapper">
-					<span className="line line1"></span>
-					<span className="letters">Varia</span>
+				<span className="text-wrapper primary-color">
+					<span className="line line1 primary-color"></span>
+					<span className="letters primary-color">Varia</span>
 				</span>
 			</h1>
 		</div>
