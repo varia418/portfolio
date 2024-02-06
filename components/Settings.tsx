@@ -1,6 +1,11 @@
 "use client";
 import { useEffect } from "react";
 import "@/loader";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "@/tailwind.config";
+
+const fullConfig = resolveConfig(tailwindConfig);
+const defaultPrimaryColor = "red";
 
 function Settings() {
 	useEffect(() => {
@@ -10,7 +15,9 @@ function Settings() {
 			.children()
 			.each((index, elem) => {
 				const color = $(elem).attr("data-value");
-				$(elem).removeClass(`border-${color}-500`);
+				if (color !== defaultPrimaryColor) {
+					$(elem).removeClass(`border-${color}-500`);
+				}
 			});
 	}, []);
 
@@ -32,8 +39,14 @@ function Settings() {
 						const color = $(elem).attr("data-value");
 						$(elem).removeClass(`border-${color}-500`);
 					});
-				var selectedColor = $(this).attr("data-value");
+				const selectedColor: string =
+					$(this).attr("data-value") ?? defaultPrimaryColor;
+
 				$(this).addClass(`border-${selectedColor}-500`);
+				document.documentElement.style.setProperty(
+					"--primary-color",
+					fullConfig.theme.colors[selectedColor][500]
+				);
 			});
 
 		return () => {
