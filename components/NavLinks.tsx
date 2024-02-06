@@ -1,11 +1,19 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 function NavLinks() {
+	const pathname = usePathname();
 	return (
 		<ul>
 			<li className="mb-5 pb-3 border-b border-slate-400">
-				<Link href="/" className="flex gap-2">
+				<Link
+					href="/"
+					className={`flex gap-2 ${
+						pathname === "/" && "primary-color"
+					}`}
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
@@ -24,7 +32,12 @@ function NavLinks() {
 				</Link>
 			</li>
 			<li className="mb-5 pb-3 border-b border-slate-400">
-				<Link href="/about" className="flex gap-2">
+				<Link
+					href="/about"
+					className={`flex gap-2 ${
+						pathname === "/about" && "primary-color"
+					}`}
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
@@ -43,7 +56,12 @@ function NavLinks() {
 				</Link>
 			</li>
 			<li className="mb-5 pb-3 border-b border-slate-400">
-				<Link href="/projects" className="flex gap-2">
+				<Link
+					href="/projects"
+					className={`flex gap-2 ${
+						pathname === "/projects" && "primary-color"
+					}`}
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
@@ -62,7 +80,12 @@ function NavLinks() {
 				</Link>
 			</li>
 			<li className="mb-5 pb-3 border-b border-slate-400">
-				<Link href="/contact" className="flex gap-2">
+				<Link
+					href="/contact"
+					className={`flex gap-2 ${
+						pathname === "/contact" && "primary-color"
+					}`}
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
