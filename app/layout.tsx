@@ -22,7 +22,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className + " flex h-screen"}>
-				<nav className="hidden sm:flex xl:w-1/6 md:w-1/3 flex-col justify-between p-10 border border-gray-300">
+				<nav className="hidden sm:flex xl:w-1/6 md:w-1/3 flex-col justify-between p-10 border border-gray-300 shrink-0">
 					<AnimatedLogo />
 					<NavLinks />
 					<p className="text-center text-sm">
