@@ -57,9 +57,9 @@ function NavLinks() {
 			</li>
 			<li className="mb-5 pb-3 border-b border-slate-400">
 				<Link
-					href="/projects"
+					href="/works"
 					className={`flex gap-2 ${
-						pathname === "/projects" && "primary-color"
+						pathname === "/works" && "primary-color"
 					}`}
 				>
 					<svg
@@ -76,7 +76,7 @@ function NavLinks() {
 							d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
 						/>
 					</svg>
-					Projects
+					Works
 				</Link>
 			</li>
 			<li className="mb-5 pb-3 border-b border-slate-400">
