@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -21,9 +22,11 @@ export default function Home() {
 					</span>{" "}
 					with a passion for crafting responsive and dynamic websites.
 				</p>
-				<button className="bg-[--primary-color] border-2 border-[--primary-color] text-white rounded-full px-5 py-2 mt-4 hover:bg-slate-200 hover:text-[--primary-color]">
-					Resume
-				</button>
+				<Link href="/CV_Le_Thanh_Nhan_en.pdf" target="_blank">
+					<button className="bg-[--primary-color] border-2 border-[--primary-color] text-white rounded-full px-5 py-2 mt-4 hover:bg-slate-200 hover:text-[--primary-color]">
+						Resume
+					</button>
+				</Link>
 			</div>
 		</div>
 	);
