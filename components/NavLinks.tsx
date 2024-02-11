@@ -10,7 +10,7 @@ function NavLinks() {
 			<li className="mb-5 pb-3 border-b border-slate-400">
 				<Link
 					href="/"
-					className={`flex gap-2 ${
+					className={`flex gap-2 hover:primary-color ${
 						pathname === "/" && "primary-color"
 					}`}
 				>
@@ -34,7 +34,7 @@ function NavLinks() {
 			<li className="mb-5 pb-3 border-b border-slate-400">
 				<Link
 					href="/about"
-					className={`flex gap-2 ${
+					className={`flex gap-2 hover:primary-color ${
 						pathname === "/about" && "primary-color"
 					}`}
 				>
@@ -58,7 +58,7 @@ function NavLinks() {
 			<li className="mb-5 pb-3 border-b border-slate-400">
 				<Link
 					href="/works"
-					className={`flex gap-2 ${
+					className={`flex gap-2 hover:primary-color ${
 						pathname === "/works" && "primary-color"
 					}`}
 				>
@@ -82,7 +82,7 @@ function NavLinks() {
 			<li className="mb-5 pb-3 border-b border-slate-400">
 				<Link
 					href="/contact"
-					className={`flex gap-2 ${
+					className={`flex gap-2 hover:primary-color ${
 						pathname === "/contact" && "primary-color"
 					}`}
 				>
