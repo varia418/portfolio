@@ -27,6 +27,12 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
+@layer components {
+    .primary-button {
+        @apply bg-[--primary-color] border-2 border-[--primary-color] text-white rounded-full px-5 py-2 mt-4 hover:bg-transparent hover:text-[--primary-color];
+    }
+}
+
 @layer utilities {
     .primary-color {
         color: var(--primary-color);

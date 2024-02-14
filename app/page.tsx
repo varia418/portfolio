@@ -23,9 +23,7 @@ export default function Home() {
 					with a passion for crafting responsive and dynamic websites.
 				</p>
 				<Link href="/CV_Le_Thanh_Nhan_en.pdf" target="_blank">
-					<button className="bg-[--primary-color] border-2 border-[--primary-color] text-white rounded-full px-5 py-2 mt-4 hover:bg-slate-200 hover:text-[--primary-color]">
-						Resume
-					</button>
+					<button className="primary-button">Resume</button>
 				</Link>
 			</div>
 		</div>
