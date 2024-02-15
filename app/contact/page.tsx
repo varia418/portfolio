@@ -1,4 +1,10 @@
+"use client";
+
 export default function Contact() {
+	function handleSubmit(e: React.SyntheticEvent) {
+		e.preventDefault();
+		console.log(e);
+	}
 	return (
 		<div className="p-10 h-full flex justify-center items-center relative">
 			<h1 className="primary-color mb-8 text-3xl font-bold absolute top-5 left-5">
@@ -42,7 +48,10 @@ export default function Contact() {
 					</div>
 				</div>
 				<h2 className="mb-4 text-xl font-semibold">Contact Form</h2>
-				<form className="grid grid-cols-2 gap-4">
+				<form
+					onSubmit={handleSubmit}
+					className="grid grid-cols-2 gap-4"
+				>
 					<input className="border p-2 rounded" placeholder="Name" />
 					<input className="border p-2 rounded" placeholder="Email" />
 					<input
@@ -52,9 +61,12 @@ export default function Contact() {
 					<textarea
 						className="border col-span-full p-2 rounded"
 						placeholder="Message"
-                        rows={5}
+						rows={5}
 					/>
-					<button className="primary-button font-bold col-span-full rounded">
+					<button
+						type="submit"
+						className="primary-button font-bold col-span-full rounded"
+					>
 						SEND
 					</button>
 				</form>
