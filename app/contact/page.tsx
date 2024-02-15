@@ -43,18 +43,19 @@ export default function Contact() {
 				</div>
 				<h2 className="mb-4 text-xl font-semibold">Contact Form</h2>
 				<form className="grid grid-cols-2 gap-4">
-					<input className="border" placeholder="Name" />
-					<input className="border" placeholder="Email" />
+					<input className="border p-2 rounded" placeholder="Name" />
+					<input className="border p-2 rounded" placeholder="Email" />
 					<input
-						className="border col-span-full"
+						className="border col-span-full p-2 rounded"
 						placeholder="Subject"
 					/>
 					<textarea
-						className="border col-span-full"
+						className="border col-span-full p-2 rounded"
 						placeholder="Message"
+                        rows={5}
 					/>
-					<button className="primary-button font-bold col-span-full">
-						Send
+					<button className="primary-button font-bold col-span-full rounded">
+						SEND
 					</button>
 				</form>
 			</div>
