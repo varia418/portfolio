@@ -29,7 +29,9 @@ export default function RootLayout({
 						© 2024 Varia. All Rights Reserved.
 					</p>
 				</nav>
-				<main className="bg-slate-200 grow p-10">{children}</main>
+				<main className="bg-slate-200 grow p-10 overflow-auto">
+					{children}
+				</main>
 				<Settings />
 				<MobileNav />
 			</body>
