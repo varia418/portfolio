@@ -24,13 +24,13 @@ function ProjectCard({ title, description, image }: ProjectCardProps) {
 				<div className="mt-auto">
 					<Link
 						href={`/works/${title}`}
-						className="text-[--primary-color] font-semibold mr-4"
+						className="mr-4 font-semibold cool-link"
 					>
 						Live
 					</Link>
 					<Link
 						href={`/works/${title}`}
-						className="text-[--primary-color] font-semibold"
+						className="font-semibold cool-link"
 					>
 						Repo
 					</Link>
