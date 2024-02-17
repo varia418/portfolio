@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Home() {
 	return (
-		<div className="py-10 flex h-full justify-center items-center gap-20">
-			<div className="basis-1/3 flex justify-center">
+		<div className="py-10 flex h-full justify-center items-center sm:gap-20 flex-col sm:flex-row gap-10">
+			<div className="flex justify-end">
 				<Image
 					src="/avatar.jpg"
 					width={300}
@@ -12,7 +12,7 @@ export default function Home() {
 					alt="avatar"
 				/>
 			</div>
-			<div className="text-2xl font-medium text-slate-700 basis-1/3">
+			<div className="text-2xl font-medium text-slate-700 basis-1/3 text-center sm:text-left">
 				<p>Hi there! I'm</p>
 				<h3 className="primary-color font-bold text-5xl my-4">Varia</h3>
 				<p>
