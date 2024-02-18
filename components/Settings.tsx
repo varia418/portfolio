@@ -3,9 +3,10 @@ import { useEffect } from "react";
 import "@/loader";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "@/tailwind.config";
+import { DefaultColors } from "tailwindcss/types/generated/colors";
 
 const fullConfig = resolveConfig(tailwindConfig);
-const defaultPrimaryColor = "red";
+const defaultPrimaryColor: keyof DefaultColors = "red";
 
 function Settings() {
 	useEffect(() => {
@@ -39,8 +40,9 @@ function Settings() {
 						const color = $(elem).attr("data-value");
 						$(elem).removeClass(`border-${color}-500`);
 					});
-				const selectedColor: string =
-					$(this).attr("data-value") ?? defaultPrimaryColor;
+				const selectedColor: keyof DefaultColors =
+					($(this).attr("data-value") as keyof DefaultColors) ??
+					defaultPrimaryColor;
 
 				$(this).addClass(`border-${selectedColor}-500`);
 				document.documentElement.style.setProperty(
