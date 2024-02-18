@@ -6,7 +6,7 @@ export default function Home() {
 		<div className="py-10 flex h-full justify-center items-center sm:gap-20 flex-col sm:flex-row gap-10">
 			<div className="flex justify-end">
 				<Image
-					src="/avatar.jpg"
+					src="/images/avatar.jpg"
 					width={300}
 					height={300}
 					alt="avatar"
