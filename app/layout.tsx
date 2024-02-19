@@ -6,6 +6,7 @@ import AnimatedLogo from "@/components/AnimatedLogo";
 import MobileNav from "@/components/MobileNav";
 import NavLinks from "@/components/NavLinks";
 import Settings from "@/components/Settings";
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
 				</main>
 				<Settings />
 				<MobileNav />
+                <Analytics />
 			</body>
 			<Script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" />
 		</html>
