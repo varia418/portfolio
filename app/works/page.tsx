@@ -1,5 +1,4 @@
 import ProjectCard from "@/components/ProjectCard";
-import Image from "next/image";
 
 export default function Works() {
 	const projects = [
@@ -8,18 +7,21 @@ export default function Works() {
 			description:
 				"A scheduling application aids users in managing time and planning effectively. It enables you to create, edit, and track events, meetings, tasks, and share schedules with others for synchronized time management. Moreover, it allows you to monitor the progress of tasks.",
 			image: "/images/confidential.jpg",
+			technologies: ["react", "nextjs", "scss", "express.js", "mysql"],
 		},
 		{
 			title: "UIT Chat",
 			description:
 				"A chat application specially designed for individuals seeking to connect with friends, family, and colleagues. This application provides an online chat platform through text and voice calls, offering the ability to create private or public chat rooms.",
 			image: "/images/uit-chat.png",
+			technologies: ["react", "express.js", "socket.io", "mongodb"],
 		},
 		{
 			title: "Diamond Jewelry",
 			description:
 				"A visually appealing and user-friendly jewelry business website, providing detailed information about products and prices, allowing customers to easily search for products.",
 			image: "/images/diamond-jewelry.png",
+			technologies: ["react", "bootstrap", "spring boot", "mongodb"],
 		},
 	];
 	return (
