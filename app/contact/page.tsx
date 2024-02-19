@@ -6,17 +6,17 @@ export default function Contact() {
 		console.log(e);
 	}
 	return (
-		<div className="p-10 h-full relative">
+		<div className="sm:p-10 py-10 h-full relative">
 			<h1 className="mb-8 text-3xl font-bold relative">
 				Contact Me
 				<span className="absolute bg-[--primary-color] h-1 w-12 left-0 -bottom-2"></span>
 				<span className="absolute bg-[--primary-color] h-1 w-8 left-0 -bottom-4"></span>
 			</h1>
 			<div className="flex justify-center">
-				<div className="border bg-white rounded-lg p-10 max-w-5xl">
+				<div className="border bg-white rounded-lg p-5 sm:p-10 max-w-5xl">
 					<h2 className="mb-4 text-xl font-semibold">Get in Touch</h2>
 					<div className="flex flex-col sm:flex-row justify-between gap-4 mb-8">
-						<div className="grow border rounded-lg p-6 flex flex-col items-center">
+						<div className="grow border rounded-lg p-3 sm:p-6 flex flex-col items-center">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -28,9 +28,11 @@ export default function Contact() {
 							</svg>
 
 							<span className="text-lg font-semibold">Email</span>
-							<span>ltnhan2610@gmail.com</span>
+							<span className="text-center">
+								ltnhan2610@gmail.com
+							</span>
 						</div>
-						<div className="grow border rounded-lg p-6 flex flex-col items-center">
+						<div className="grow border rounded-lg p-3 sm:p-6 flex flex-col items-center">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -47,7 +49,9 @@ export default function Contact() {
 							<span className="text-lg font-semibold">
 								Location
 							</span>
-							<span>Ho Chi Minh City, Viet Nam</span>
+							<span className="text-center">
+								Ho Chi Minh City, Viet Nam
+							</span>
 						</div>
 					</div>
 					<h2 className="mb-4 text-xl font-semibold">Contact Form</h2>

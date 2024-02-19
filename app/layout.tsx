@@ -6,7 +6,7 @@ import AnimatedLogo from "@/components/AnimatedLogo";
 import MobileNav from "@/components/MobileNav";
 import NavLinks from "@/components/NavLinks";
 import Settings from "@/components/Settings";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +22,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className + " flex h-screen"}>
+			<body
+				className={inter.className + " flex sm:h-screen min-h-screen"}
+			>
 				<nav className="hidden sm:flex xl:w-1/6 md:w-1/3 flex-col justify-between p-10 border border-gray-300 shrink-0">
 					<AnimatedLogo />
 					<NavLinks />
@@ -35,7 +37,7 @@ export default function RootLayout({
 				</main>
 				<Settings />
 				<MobileNav />
-                <Analytics />
+				<Analytics />
 			</body>
 			<Script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" />
 		</html>
