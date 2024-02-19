@@ -60,11 +60,11 @@ export default function Contact() {
 						className="grid grid-cols-2 gap-4"
 					>
 						<input
-							className="border p-2 rounded"
+							className="border col-span-full sm:col-span-1 p-2 rounded"
 							placeholder="Name"
 						/>
 						<input
-							className="border p-2 rounded"
+							className="border col-span-full sm:col-span-1 p-2 rounded"
 							placeholder="Email"
 						/>
 						<input
