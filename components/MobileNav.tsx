@@ -2,8 +2,18 @@
 
 import Image from "next/image";
 import NavLinks from "./NavLinks";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 function MobileNav() {
+	const pathname = usePathname();
+
+	useEffect(() => {
+		const mobileNav = document.getElementById("mobile-nav");
+		if (!mobileNav) return;
+		mobileNav.classList.add("hidden");
+	}, [pathname]);
+
 	const toggleMobileNav = () => {
 		const mobileNav = document.getElementById("mobile-nav");
 		if (!mobileNav) return;
