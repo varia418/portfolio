@@ -63,7 +63,7 @@ function Settings() {
 	}
 
 	return (
-		<div className="flex fixed bottom-10 right-0 items-end translate-x-full mr-10">
+		<div className="flex fixed bottom-10 right-0 items-end translate-x-full test mr-10">
 			<button
 				className="p-2 border border-gray-300 h-fit bg-white"
 				onClick={toggleSettings}
@@ -111,7 +111,7 @@ function Settings() {
 				</h3>
 				<div
 					id="primary-color-picker"
-					className="radio-group flex justify-evenly"
+					className="radio-group flex justify-evenly gap-1"
 				>
 					<div
 						className="inline-block cursor-pointer rounded-full border-2 border-red-500 size-6"
@@ -130,6 +130,18 @@ function Settings() {
 						data-value="green"
 					>
 						<div className="inline-block cursor-pointer rounded-full border border-white bg-green-500 size-5"></div>
+					</div>
+					<div
+						className="inline-block cursor-pointer rounded-full border-2 border-purple-500 size-6"
+						data-value="purple"
+					>
+						<div className="inline-block cursor-pointer rounded-full border border-white bg-purple-500 size-5"></div>
+					</div>
+					<div
+						className="inline-block cursor-pointer rounded-full border-2 border-pink-500 size-6"
+						data-value="pink"
+					>
+						<div className="inline-block cursor-pointer rounded-full border border-white bg-pink-500 size-5"></div>
 					</div>
 				</div>
 			</div>
