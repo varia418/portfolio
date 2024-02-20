@@ -7,18 +7,20 @@ import { DefaultColors } from "tailwindcss/types/generated/colors";
 
 const fullConfig = resolveConfig(tailwindConfig);
 const defaultPrimaryColor: keyof DefaultColors = "red";
-const defaultTheme =
-	window.matchMedia &&
-	window.matchMedia("(prefers-color-scheme: dark)").matches
-		? "dark"
-		: "light";
 
 function Settings() {
 	useEffect(() => {
-		$("#theme-picker").children().removeClass("selected");
-		$(`#theme-picker div[data-value='${defaultTheme}']`).addClass(
-			"selected"
-		);
+		if (
+			localStorage.theme === "dark" ||
+			(!("theme" in localStorage) &&
+				window.matchMedia("(prefers-color-scheme: dark)").matches)
+		) {
+			document.documentElement.classList.add("dark");
+			$("#theme-picker div[data-value='dark']").addClass("selected");
+		} else {
+			document.documentElement.classList.remove("dark");
+			$("#theme-picker div[data-value='light']").addClass("selected");
+		}
 
 		$("#primary-color-picker")
 			.children()
@@ -36,7 +38,12 @@ function Settings() {
 			.click(function () {
 				$("#theme-picker").children().removeClass("selected");
 				$(this).addClass("selected");
-				var val = $(this).attr("data-value");
+				var theme = $(this).attr("data-value");
+				if (theme === "dark") {
+					document.documentElement.classList.add("dark");
+				} else {
+					document.documentElement.classList.remove("dark");
+				}
 			});
 
 		$("#primary-color-picker")
