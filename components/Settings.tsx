@@ -7,10 +7,18 @@ import { DefaultColors } from "tailwindcss/types/generated/colors";
 
 const fullConfig = resolveConfig(tailwindConfig);
 const defaultPrimaryColor: keyof DefaultColors = "red";
+const defaultTheme =
+	window.matchMedia &&
+	window.matchMedia("(prefers-color-scheme: dark)").matches
+		? "dark"
+		: "light";
 
 function Settings() {
 	useEffect(() => {
 		$("#theme-picker").children().removeClass("selected");
+		$(`#theme-picker div[data-value='${defaultTheme}']`).addClass(
+			"selected"
+		);
 
 		$("#primary-color-picker")
 			.children()
