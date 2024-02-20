@@ -15,6 +15,8 @@ export default function Works() {
 				"A chat application specially designed for individuals seeking to connect with friends, family, and colleagues. This application provides an online chat platform through text and voice calls, offering the ability to create private or public chat rooms.",
 			image: "/images/uit-chat.png",
 			technologies: ["react", "express.js", "socket.io", "mongodb"],
+			url: "https://uit-chat.varia.id.vn/",
+			repo: "https://github.com/varia418/uitchat-frontend",
 		},
 		{
 			title: "Diamond Jewelry",
@@ -22,6 +24,8 @@ export default function Works() {
 				"A visually appealing and user-friendly jewelry business website, providing detailed information about products and prices, allowing customers to easily search for products.",
 			image: "/images/diamond-jewelry.png",
 			technologies: ["react", "bootstrap", "spring boot", "mongodb"],
+			url: "https://diamondjewelry.netlify.app/",
+			repo: "https://github.com/varia418/diamond-jewelry",
 		},
 	];
 	return (

@@ -8,6 +8,8 @@ interface ProjectCardProps {
 	description: string;
 	image: string;
 	technologies: string[];
+	url?: string;
+	repo?: string;
 }
 
 function ProjectCard({
@@ -15,6 +17,8 @@ function ProjectCard({
 	description,
 	image,
 	technologies,
+	url,
+	repo,
 }: ProjectCardProps) {
 	const techs = ["react", "bootstrap", "spring boot"];
 	return (
@@ -35,18 +39,24 @@ function ProjectCard({
 					))}
 				</div>
 				<div className="mt-auto pt-2">
-					<Link
-						href={`/works/${title}`}
-						className="mr-4 font-semibold cool-link"
-					>
-						Live
-					</Link>
-					<Link
-						href={`/works/${title}`}
-						className="font-semibold cool-link"
-					>
-						Repo
-					</Link>
+					{url && (
+						<Link
+							href={url}
+							className="mr-4 font-semibold cool-link"
+							target="_blank"
+						>
+							Live
+						</Link>
+					)}
+					{repo && (
+						<Link
+							href={repo}
+							className="font-semibold cool-link"
+							target="_blank"
+						>
+							Repo
+						</Link>
+					)}
 				</div>
 			</div>
 		</div>
