@@ -28,7 +28,7 @@ export default function Home() {
 					</Link>
 					<div className="flex gap-2">
 						<Link href="/CV_Le_Thanh_Nhan_en.pdf" target="_blank">
-							<button className="rounded border border-slate-300 p-2 bg-white">
+							<button className="rounded-lg border border-slate-300 p-2 bg-white">
 								<svg
 									viewBox="0 0 24 24"
 									aria-hidden="true"
@@ -43,7 +43,7 @@ export default function Home() {
 							</button>
 						</Link>
 						<Link href="/CV_Le_Thanh_Nhan_en.pdf" target="_blank">
-							<button className="rounded border border-slate-300 p-2 bg-white">
+							<button className="rounded-lg border border-slate-300 p-2 bg-white">
 								<svg
 									// style="color: rgb(111, 218, 68);"
 									xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ export default function Home() {
 							</button>
 						</Link>
 						<Link href="/CV_Le_Thanh_Nhan_en.pdf" target="_blank">
-							<button className="rounded border border-slate-300 p-2 bg-white">
+							<button className="rounded-lg border border-slate-300 p-2 bg-white">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
