@@ -27,7 +27,10 @@ export default function Home() {
 						<button className="primary-button">Resume</button>
 					</Link>
 					<div className="flex gap-2">
-						<Link href="/CV_Le_Thanh_Nhan_en.pdf" target="_blank">
+						<Link
+							href="https://github.com/varia418"
+							target="_blank"
+						>
 							<button className="rounded-lg border border-slate-300 p-2 bg-white">
 								<svg
 									viewBox="0 0 24 24"
@@ -42,10 +45,12 @@ export default function Home() {
 								</svg>
 							</button>
 						</Link>
-						<Link href="/CV_Le_Thanh_Nhan_en.pdf" target="_blank">
+						<Link
+							href="https://www.upwork.com/freelancers/~01a89128c9c9d394ca"
+							target="_blank"
+						>
 							<button className="rounded-lg border border-slate-300 p-2 bg-white">
 								<svg
-									// style="color: rgb(111, 218, 68);"
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 448 512"
 									className="size-8"
@@ -57,7 +62,10 @@ export default function Home() {
 								</svg>
 							</button>
 						</Link>
-						<Link href="/CV_Le_Thanh_Nhan_en.pdf" target="_blank">
+						<Link
+							href="https://www.linkedin.com/in/nh%C3%A2n-l%C3%AA-0a937b1b0/"
+							target="_blank"
+						>
 							<button className="rounded-lg border border-slate-300 p-2 bg-white">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
