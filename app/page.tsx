@@ -23,7 +23,7 @@ export default function Home() {
 					with a passion for crafting responsive and dynamic websites.
 				</p>
 				<div className="mt-4 flex gap-8">
-					<Link href="/CV_Nhan_Le_Thanh_en.pdf" target="_blank">
+					<Link href="/Nhan-Le-Thanh-Resume.pdf" target="_blank">
 						<button className="primary-button">Resume</button>
 					</Link>
 					<div className="flex gap-2">
